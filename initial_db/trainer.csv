@@ -1,51 +1,51 @@
-,Name,DOB,Club,trainer_id
-0,Caryn Rich,04-14-46,Arka Gdynia,0
-1,Whitney Klein,04-03-77,Korona Kielce,1
-2,Patricia Powers,12-11-46,Wisła Płock	Płock,2
-3,Winifred Vinson,01-18-74,Legia Warsawa,3
-4,Mechelle Griffin,06-20-66,Bruk-Bet Termalica Nieciecza,4
-5,Rana Kidd,09-29-77,Śląsk Wrocław,5
-6,Allegra Monroe,09-01-68,Piast Gliwice,6
-7,Kiona Sanders,11-19-44,Wisła Krakówa,7
-8,Chanda Cooley,08-22-67,Bruk-Bet Termalica Nieciecza,8
-9,Desiree Walsh,06-11-57,Cracovia,9
-10,Eve Solomon,12-29-80,Wisła Krakówa,10
-11,Laurel Rhodes,08-03-64,Piast Gliwice,11
-12,Felicia Franks,09-05-70,Wisła Płock	Płock,12
-13,Aphrodite Rush,09-17-50,Arka Gdynia,13
-14,Maia Huffman,05-07-61,Wisła Krakówa,14
-15,Inga Mccray,01-29-89,Jagiellonia Białystok,15
-16,Katell Edwards,10-22-51,Piast Gliwice,16
-17,Clare Castaneda,03-03-57,Lech Poznań,17
-18,Rebekah Curtis,07-18-89,Śląsk Wrocław,18
-19,Iona Calhoun,11-21-90,Arka Gdynia,19
-20,Tanisha Finch,02-16-68,Bruk-Bet Termalica Nieciecza,20
-21,Lesley Herman,10-04-62,Legia Warsawa,21
-22,Kirsten Webster,03-12-64,Arka Gdynia,22
-23,Sigourney Quinn,01-08-58,Lechia Gdańsk,23
-24,Medge Reese,11-28-90,Lech Poznań,24
-25,May Hamilton,06-10-62,Legia Warsawa,25
-26,Nell Chavez,01-01-63,Cracovia,26
-27,Delilah Mccarty,01-14-45,Sandecja Nowy Sącz	Nieciecza,27
-28,Uma Key,10-23-58,Piast Gliwice,28
-29,Alexa Mcclain,10-10-61,Śląsk Wrocław,29
-30,Brynne Fuentes,02-25-77,Piast Gliwice,30
-31,Sacha Gamble,03-20-49,Pogoń Szczecin,31
-32,Candice Valentine,05-18-79,Piast Gliwice,32
-33,Kirestin Salinas,01-17-80,Śląsk Wrocław,33
-34,Dara Hunter,08-16-44,Arka Gdynia,34
-35,Jocelyn Holman,08-15-83,Korona Kielce,35
-36,Iona Kline,05-14-68,Jagiellonia Białystok,36
-37,Desirae Mann,04-21-69,Lech Poznań,37
-38,Tamekah Rivera,08-23-71,Wisła Krakówa,38
-39,Sierra Malone,02-13-60,Śląsk Wrocław,39
-40,Ariana Britt,08-01-87,Bruk-Bet Termalica Nieciecza,40
-41,Jana Hopkins,08-02-51,Górnik Zabrze,41
-42,Farrah Olsen,02-02-73,Cracovia,42
-43,Jena Hicks,02-02-63,Bruk-Bet Termalica Nieciecza,43
-44,Priscilla Maldonado,02-06-59,Arka Gdynia,44
-45,Skyler Waller,11-09-75,Jagiellonia Białystok,45
-46,Yvette Small,05-25-90,Lech Poznań,46
-47,Nyssa Hayden,07-19-48,Śląsk Wrocław,47
-48,Erica Key,03-28-68,Śląsk Wrocław,48
-49,Maggy Rivera,08-11-74,Legia Warsawa,49
+Name,DOB,Club,trainer_id
+Caryn Rich,04-14-46,Arka Gdynia,0
+Whitney Klein,04-03-77,Pogon Szczecin,1
+Patricia Powers,12-11-46,Lechia Gdansk,2
+Winifred Vinson,01-18-74,Sandecja Nowy Sacz,3
+Mechelle Griffin,06-20-66,Slask Wroclaw,4
+Rana Kidd,09-29-77,Arka Gdynia,5
+Allegra Monroe,09-01-68,Cracovia,6
+Kiona Sanders,11-19-44,Slask Wroclaw,7
+Chanda Cooley,08-22-67,Arka Gdynia,8
+Desiree Walsh,06-11-57,Lech Poznan,9
+Eve Solomon,12-29-80,Sandecja Nowy Sacz,10
+Laurel Rhodes,08-03-64,Piast Gliwice,11
+Felicia Franks,09-05-70,Wisla Plock,12
+Aphrodite Rush,09-17-50,Sandecja Nowy Sacz,13
+Maia Huffman,05-07-61,Legia Warsawa,14
+Inga Mccray,01-29-89,Lechia Gdansk,15
+Katell Edwards,10-22-51,Arka Gdynia,16
+Clare Castaneda,03-03-57,Gornik Zabrze,17
+Rebekah Curtis,07-18-89,Slask Wroclaw,18
+Iona Calhoun,11-21-90,Jagiellonia Bialystok,19
+Tanisha Finch,02-16-68,Arka Gdynia,20
+Lesley Herman,10-04-62,Zaglebie Lubin,21
+Kirsten Webster,03-12-64,Wisla Plock,22
+Sigourney Quinn,01-08-58,Pogon Szczecin,23
+Medge Reese,11-28-90,Cracovia,24
+May Hamilton,06-10-62,Zaglebie Lubin,25
+Nell Chavez,01-01-63,Bruk-Bet Termalica Nieciecza,26
+Delilah Mccarty,01-14-45,Jagiellonia Bialystok,27
+Uma Key,10-23-58,Cracovia,28
+Alexa Mcclain,10-10-61,Korona Kielce,29
+Brynne Fuentes,02-25-77,Slask Wroclaw,30
+Sacha Gamble,03-20-49,Pogon Szczecin,31
+Candice Valentine,05-18-79,Jagiellonia Bialystok,32
+Kirestin Salinas,01-17-80,Wisla Krakowa,33
+Dara Hunter,08-16-44,Gornik Zabrze,34
+Jocelyn Holman,08-15-83,Sandecja Nowy Sacz,35
+Iona Kline,05-14-68,Gornik Zabrze,36
+Desirae Mann,04-21-69,Pogon Szczecin,37
+Tamekah Rivera,08-23-71,Lech Poznan,38
+Sierra Malone,02-13-60,Wisla Krakowa,39
+Ariana Britt,08-01-87,Piast Gliwice,40
+Jana Hopkins,08-02-51,Slask Wroclaw,41
+Farrah Olsen,02-02-73,Lech Poznan,42
+Jena Hicks,02-02-63,Piast Gliwice,43
+Priscilla Maldonado,02-06-59,Korona Kielce,44
+Skyler Waller,11-09-75,Lechia Gdansk,45
+Yvette Small,05-25-90,Bruk-Bet Termalica Nieciecza,46
+Nyssa Hayden,07-19-48,Lech Poznan,47
+Erica Key,03-28-68,Pogon Szczecin,48
+Maggy Rivera,08-11-74,Jagiellonia Bialystok,49
