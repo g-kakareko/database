@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Taylor Swift Concert Ticket-Price Showdown</title>
+	</head>
+	<body>
+		<h1> Welcome to the Taylor Swift Concert Ticket-Price Showdown! </h1>
+
+	</body>
+	{% block content %}
+	<h1>{{title}}</h1>
+		<form action="" method="post" name="event_search">
+		{{form.hidden_tag()}}
+		<p> Please enter the event you’d like to find tickets for:
+			<br>{{form.event_name(size=80)}}<br>
+		</p>
+		<p> Select a location: {{form.location}} </p>
+		<p><input type="submit" value="Find my tickets!"></p>
+		</form>
+
+
+	{% if posts %}
+	<table id="t01">
+	<thead>
+	<tr>
+		<th>Title</th>
+		<th>Date</th>
+		<th>Venue</th>
+		<th>Number of Tickets</th>
+		<th>Price/Ticket</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for p in posts %}
+	<tr>
+		<td>{{ p[3] }}</td>
+		<td>{{ p[0] }}</td>
+		<td>{{ p[1] }}</td>
+		<td>{{ p[2] }}</td>
+		<td>{{ p[4] }}</td>
+	</tr> 
+	{% endfor %}
+	</tbody>
+	</table>
+	{% endif %}
+	{% endblock %}
+</html>
