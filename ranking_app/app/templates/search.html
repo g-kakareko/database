@@ -13,6 +13,9 @@
 		<p> Please enter the event you’d like to find tickets for:
 			<br>{{form.event_name(size=80)}}<br>
 		</p>
+		<p> Please enter date:
+			<br>{{form.start(size=80)}}<br>
+		</p>
 		<p> Select a location: {{form.location}} </p>
 		<p><input type="submit" value="Find my tickets!"></p>
 		</form>
@@ -31,6 +34,7 @@
 	<tr>
 		<td>{{ event }}</td>
 		<td>{{ location }}</td>
+		<td>{{ dob }}</td>
 	</tr> 
 	</tbody>
 	</table>

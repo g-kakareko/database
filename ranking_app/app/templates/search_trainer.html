@@ -1,0 +1,32 @@
+<html>
+
+	{% block content %}
+	<h1>{{title}}</h1>
+		<form action="" method="post" name="event_search">
+		{{form.hidden_tag()}}
+		<p> Please enter the name of a trainer:
+			<br>{{form.trainer_name(size=80)}}<br>
+		</p>
+		<p> Please enter DOB:
+			<br>{{form.trainer_dob(size=80)}}<br>
+		</p>
+		<p><input type="submit" value="Find trainer"></p>
+		</form>
+	{% if posts %}
+	<table id="t01">
+	<thead>
+	<tr>
+		<th>trainer_name</th>
+		<th>trainer_dob</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>{{ trainer_name }}</td>
+		<td>{{ trainer_dob }}</td>
+	</tr> 
+	</tbody>
+	</table>
+	{% endif %}
+	{% endblock %}
+</html>

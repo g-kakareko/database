@@ -1,0 +1,34 @@
+<html>
+
+	{% block content %}
+	<h1>{{title}}</h1>
+		<form action="" method="post" name="event_search">
+		{{form.hidden_tag()}}
+		<p> Please enter the name of a trainer: </p>
+		<p> Please enter year of competiton:
+			<br>{{form.year}}<br>
+		</p>
+		<p> Select a discipline: {{form.discipline}} </p>
+		<p> Select a gender: {{form.gender}} </p>
+		<p><input type="submit" value="Find ranking"></p>
+		</form>
+	{% if posts %}
+	<table id="t01">
+	<thead>
+	<tr>
+		<th>location</th>
+		<th>discipline</th>
+		<th>gender</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>{{ year }}</td>
+		<td>{{ discipline }}</td>
+		<td>{{ gender }}</td>
+	</tr> 
+	</tbody>
+	</table>
+	{% endif %}
+	{% endblock %}
+</html>

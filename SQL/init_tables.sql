@@ -8,30 +8,29 @@ CREATE TABLE STADION (
 	Location CHAR(100), 
 	Capacity INT,
 	stadium_id INT,
-	PRIMARY KEY (stadium_id)
+	PRIMARY KEY (Location)
 	);
 CREATE TABLE TRAINER (
 	Name CHAR(100),
 	DOB DATETIME,
-	Club CHAR(100),
-	trainer_id INT,
-	PRIMARY KEY (trainer_id)
+	Club CHAR(100)
+	PRIMARY KEY (Name, DOB)
 	);
 CREATE TABLE RUNNER (
 	Name CHAR(100),
 	DOB DATETIME,
 	Club CHAR(100),
 	gender VARCHAR(1),
-	trener_id INT,
-	PRIMARY KEY (Name, DOB, gender)
+	tr_Name CHAR(100)
+	PRIMARY KEY (Name, DOB)
 	);
 CREATE TABLE COMPETITON (
-	stadium_id INT,
+	Location CHAR(100),
 	date_comp DATETIME,
 	attendence INT,
 	weather CHAR(1),
 	competition_id INT,
-	PRIMARY KEY (stadium_id, date_comp)
+	PRIMARY KEY (Location, date_comp)
 	);
 -- Name,DOB,Club,gender,result,discipline,date,competition_id,result_id
 CREATE TABLE RESULT (
@@ -42,9 +41,9 @@ CREATE TABLE RESULT (
 	result FLOAT,
 	discipline CHAR(100),
 	date_comp DATETIME,
-	competition_id INT,
+	Location CHAR(100),
 	result_id INT,
-	PRIMARY KEY (Name, DOB, Club, gender, result, discipline, date_comp, competition_id, result_id)
+	PRIMARY KEY (Name, DOB, Club, gender, result, discipline, date_comp, Location, result_id)
 	);
 -- Initializing the Tables:
 -- Stadium
