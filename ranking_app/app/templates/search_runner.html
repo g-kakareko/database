@@ -2,6 +2,7 @@
 
 	{% block content %}
 	<h1>{{title}}</h1>
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 		<form action="" method="post" name="event_search">
 		{{form.hidden_tag()}}
 		<p> Please enter the name of a runner:
@@ -13,7 +14,7 @@
 		<p><input type="submit" value="Find runner"></p>
 		</form>
 	{% if posts %}
-	<table id="t01">
+<!-- 	<table id="t01">
 	<thead>
 	<tr>
 		<th>runner_name</th>
@@ -26,7 +27,19 @@
 		<td>{{ runner_dob }}</td>
 	</tr> 
 	</tbody>
-	</table>
+	</table> -->
+
+	<title>Simple tables</title>
+<!-- 	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}"> -->
+	
+	<div class=page>
+<!-- 	  <h1>Surfer groups</h1> -->
+	  {% for table in tables %}
+	    <h2>{{titles[loop.index]}}</h2>
+	    {{ table|safe }}
+	  {% endfor %}
+	</div>
+
 	{% endif %}
 	{% endblock %}
 </html>

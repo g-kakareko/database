@@ -5,17 +5,20 @@ from wtforms import StringField, SelectField
 from wtforms.validators import DataRequired
 from wtforms import validators
 from wtforms.fields.html5 import DateField
+import app.db as db
 
-class EventSearch(Form):
-	event_name = StringField('event_name', validators=[DataRequired()])
-	location = SelectField('location', 
-		choices=[('tallahassee', 'Tallahassee'), ('orlando', 'Orlando')])
-	start = DateField('Plan Start', validators=[DataRequired()])
+# class EventSearch(Form):
+# 	event_name = StringField('event_name', validators=[DataRequired()])
+# 	location = SelectField('location', 
+# 		choices=[('tallahassee', 'Tallahassee'), ('orlando', 'Orlando')])
+# 	start = DateField('Plan Start', validators=[DataRequired()])
 
 
 class RunnerSearch(Form):
 	runner_name = StringField('runner_name', validators=[DataRequired()])
+	# runner_dob = DateField('runner_dob', validators=[DataRequired()])
 	runner_dob = DateField('runner_dob', validators=[DataRequired()])
+
 
 
 class TrainerSearch(Form):
@@ -24,7 +27,11 @@ class TrainerSearch(Form):
 
 
 class CompetitionSearch(Form):
-	location = StringField('location', validators=[DataRequired()])
+	locations = db.query_stadiums_names() 
+	location = SelectField('location',
+	        choices=locations,
+	        validators=[DataRequired()])
+	# location = StringField('location', validators=[DataRequired()])
 	competition_date = DateField('competition_date', validators=[DataRequired()])
 
 

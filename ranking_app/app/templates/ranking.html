@@ -2,6 +2,7 @@
 
 	{% block content %}
 	<h1>{{title}}</h1>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 		<form action="" method="post" name="event_search">
 		{{form.hidden_tag()}}
 		<p> Please enter the name of a trainer: </p>
@@ -13,7 +14,7 @@
 		<p><input type="submit" value="Find ranking"></p>
 		</form>
 	{% if posts %}
-	<table id="t01">
+<!-- 	<table id="t01">
 	<thead>
 	<tr>
 		<th>location</th>
@@ -28,7 +29,16 @@
 		<td>{{ gender }}</td>
 	</tr> 
 	</tbody>
-	</table>
+	</table> -->
+		
+	<div class=page>
+<!-- 	  <h1>Surfer groups</h1> -->
+	{% for table in tables %}
+	<h2>{{titles[loop.index]}}</h2>
+	{{ table|safe }}
+	{% endfor %}
+	
+	</div>
 	{% endif %}
 	{% endblock %}
 </html>

@@ -1,9 +1,24 @@
 <html>
+<div class=page>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
 	<head>
-		<title>Taylor Swift Concert Ticket-Price Showdown</title>
+		<title>GK TRACK and Field</title>
 	</head>
 	<body>
-		<h1> Welcome to the Taylor Swift Concert Ticket-Price Showdown! </h1>
+		<h1> Welcome to the Runners results database aplication</h1>
+
+	<div class="h1" >
+
+		<p><a href="{{ url_for('search_runner') }}">Search for a runner</a></p>
+		<p><a href="{{ url_for('search_trainer') }}">Search for a trainer</a></p>
+		<p><a href="{{ url_for('search_competition') }}">Search for a competition</a></p>
+		<p><a href="{{ url_for('ranking') }}">Ranking</a></p>
+		<p><a href="{{ url_for('ranking') }}">Upload competition result</a></p>
+
+	</div>
+
 		{% block content %} {% endblock %}
 	</body>
+</div>
 </html>
