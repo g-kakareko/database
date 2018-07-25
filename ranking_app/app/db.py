@@ -168,3 +168,98 @@ def query_ranking_sing(comp_year, disc, gend):
     df = df.sort_values(by=['result'],na_position='first').iloc[:10]
 
     return df
+
+
+def add_results(csv_dir):
+	# csv_dir = '/home/grzegorz/Desktop/Database/Project/database/initial_db/stadion.csv'
+	header = ['Name','DOB','Club','gender','result',
+	'discipline','date_comp','competition_id','result_id']
+	
+	df = pd.read_csv(csv_dir,skiprows=[0], names=header)
+	db = sql.engine.url.URL(drivername='mysql+pymysql', username='root', host='localhost', database='kakarekodb')
+	engine = create_engine(db)
+	a=df.to_sql('RESULT', con=engine, if_exists='append',index=False)
+
+
+def add_runners(csv_dir):
+	header = ['Name',
+	'DOB',
+	'Club',
+	'gender',
+	'trener_id']
+
+	df = pd.read_csv(csv_dir,skiprows=[0], names=header)
+	db = sql.engine.url.URL(drivername='mysql+pymysql', username='root', host='localhost', database='kakarekodb')
+	engine = create_engine(db)
+	a=df.to_sql('RUNNER', con=engine, if_exists='append',index=False)
+
+
+def add_trainers(csv_dir):
+	header = ['Name',
+	'DOB',
+	'Club',
+	'trainer_id']
+	df = pd.read_csv(csv_dir,skiprows=[0], names=header)
+	db = sql.engine.url.URL(drivername='mysql+pymysql', username='root', host='localhost', database='kakarekodb')
+	engine = create_engine(db)
+	a=df.to_sql('TRAINER', con=engine, if_exists='append',index=False)
+
+
+def add_competition(csv_dir):
+	header = ['stadium_id',
+	'date_comp',
+	'attendence',
+	'weather',
+	'competition_id']
+	df = pd.read_csv(csv_dir,skiprows=[0], names=header)
+	db = sql.engine.url.URL(drivername='mysql+pymysql', username='root', host='localhost', database='kakarekodb')
+	engine = create_engine(db)
+	a=df.to_sql('STADION', con=engine, if_exists='append',index=False)
+
+
+def delete_runner(runner_name, runner_dob):
+    db = sql.engine.url.URL(drivername='mysql+pymysql', username='root', host='localhost', database='kakarekodb')
+    metadata = MetaData(db)
+    RUNNER = Table('RUNNER', metadata, autoload=True)
+    TRAINER = Table('TRAINER', metadata, autoload=True)
+
+    # statment = RUNNER.delete().where(and_(RUNNER.c.DOB == runner_dob, RUNNER.c.Name == runner_name , RUNNER.c.trener_id == TRAINER.c.trainer_id))
+    statment = RUNNER.delete().where(and_(RUNNER.c.DOB == runner_dob, RUNNER.c.Name == runner_name ))
+    # statment = RUNNER.delete().where(RUNNER.c.Name == runner_name )
+    
+    statment.execute()
+
+
+def delete_results(runner_name, runner_dob):
+    db = sql.engine.url.URL(drivername='mysql+pymysql', username='root', host='localhost', database='kakarekodb')
+    metadata = MetaData(db)
+    RUNNER = Table('RUNNER', metadata, autoload=True)
+    TRAINER = Table('TRAINER', metadata, autoload=True)
+    RESULT = Table('RESULT', metadata, autoload=True)
+    # statment = RUNNER.delete().where(and_(RUNNER.c.DOB == runner_dob, RUNNER.c.Name == runner_name , RUNNER.c.trener_id == TRAINER.c.trainer_id))
+    statment = RESULT.delete().where(and_(RESULT.c.DOB == runner_dob, RESULT.c.Name == runner_name ))
+    # statment = RUNNER.delete().where(RUNNER.c.Name == runner_name )
+ 
+    statment.execute()
+
+
+def delete_trainer(trainer_name, trainer_dob):
+	db = sql.engine.url.URL(drivername='mysql+pymysql', username='root', host='localhost', database='kakarekodb')
+	metadata = MetaData(db)
+	TRAINER = Table('TRAINER', metadata, autoload=True)
+	statment = TRAINER.delete().where(and_(TRAINER.c.DOB == trainer_dob, TRAINER.c.Name == trainer_name))
+	statment.execute()
+	return
+
+
+def delete_comp_res(comp_loc, comp_date):
+	db = sql.engine.url.URL(drivername='mysql+pymysql', username='root', host='localhost', database='kakarekodb')
+	metadata = MetaData(db)
+	COMPETITON = Table('COMPETITON', metadata, autoload=True)
+	RESULT = Table('RESULT', metadata, autoload=True)
+	STADION = Table('STADION', metadata, autoload=True)
+
+	statment = RESULT.delete().where(and_(STADION.c.Location == comp_loc, COMPETITON.c.stadium_id == STADION.c.stadium_id,
+	                                      COMPETITON.c.date_comp==comp_date, COMPETITON.c.competition_id==RESULT.c.competition_id))
+	statment.execute()
+	return

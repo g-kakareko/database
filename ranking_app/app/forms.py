@@ -1,11 +1,16 @@
 # from flask.ext.wtf import Form
 from flask_wtf import Form
-from wtforms import StringField, SelectField
+from wtforms import StringField, SelectField,SubmitField
 # , DateField
 from wtforms.validators import DataRequired
 from wtforms import validators
 from wtforms.fields.html5 import DateField
 import app.db as db
+
+from flask import url_for, redirect, render_template
+from flask_wtf import Form
+from flask_wtf.file import FileField
+from werkzeug import secure_filename
 
 # class EventSearch(Form):
 # 	event_name = StringField('event_name', validators=[DataRequired()])
@@ -18,12 +23,13 @@ class RunnerSearch(Form):
 	runner_name = StringField('runner_name', validators=[DataRequired()])
 	# runner_dob = DateField('runner_dob', validators=[DataRequired()])
 	runner_dob = DateField('runner_dob', validators=[DataRequired()])
-
+	delete_form = SubmitField()
 
 
 class TrainerSearch(Form):
 	trainer_name = StringField('trainer_name', validators=[DataRequired()])
 	trainer_dob = DateField('trainer_dob', validators=[DataRequired()])
+	delete_form = SubmitField()
 
 
 class CompetitionSearch(Form):
@@ -33,6 +39,7 @@ class CompetitionSearch(Form):
 	        validators=[DataRequired()])
 	# location = StringField('location', validators=[DataRequired()])
 	competition_date = DateField('competition_date', validators=[DataRequired()])
+	delete_form = SubmitField()
 
 
 class Ranking(Form):
@@ -48,3 +55,14 @@ class Ranking(Form):
 	year = SelectField('discipline',
 	        choices=years,
 	        validators=[DataRequired()])
+
+
+# class PhotoForm(FlaskForm):
+#     photo = FileField(validators=[FileRequired()])
+
+class UploadForm(Form):
+    file = FileField()
+
+
+class delete(Form):
+	delete_form = SubmitField()

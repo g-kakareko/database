@@ -12,8 +12,24 @@
 			<br>{{form.runner_dob(size=80)}}<br>
 		</p>
 		<p><input type="submit" value="Find runner"></p>
+		<p> DELETE:
+			<br>{{form.delete_form()}}<br>
+		</p>
 		</form>
 	{% if posts %}
+	<!-- <form action="" method="post" name="event_search">
+		<p><input type="submit" value="delete runner"></p>
+	</form> -->
+<!-- 	<form action="" method="post" name="event_search">
+	{{ form.hidden_tag() }}
+	{{form.delete_form()}}
+	</form> -->
+<!-- 		{% if posts2 %}
+			record was deleted
+			{{ a }}
+
+		{% endif %} -->
+	
 <!-- 	<table id="t01">
 	<thead>
 	<tr>
